@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
 import { Codepen, Columns4, DatabaseZap, ImageUpscale, Route } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion"; // Import Framer Motion
 
