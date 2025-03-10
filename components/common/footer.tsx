@@ -27,9 +27,9 @@ interface MenuItem {
   const Footer2 = ({
     logo = {
       src: "/logo_opencv.png",
-      alt: "blocks for shadcn/ui",
+      alt: "opencv",
       title: "",
-      url: "https://www.shadcnblocks.com",
+      url: "https://www.opencv.org",
     },
     tagline = "",
     menuItems = [
