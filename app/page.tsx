@@ -16,6 +16,8 @@ export default function Home() {
       <Testimonial />
       <Banner />
       <Footer2 />
+      <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-background to-transparent"></div>
+      <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-background to-transparent"></div>
     </div>
   )
 }
