@@ -23,20 +23,9 @@ export const Feature6 = () => (
           <div className="bg-muted border h-full lg:col-span-2 p-6 aspect-square lg:aspect-auto flex justify-between flex-col">
             <User className="w-8 h-8 stroke-1" />
             <div className="flex flex-col">
-              <h3 className="text-xl tracking-tight">Pay supplier invoices</h3>
+              <h3 className="text-xl tracking-tight">AI-Powered Call Analysis</h3>
               <p className="text-muted-foreground max-w-xs text-base">
-                Our goal is to streamline SMB trade, making it easier and faster
-                than ever.
-              </p>
-            </div>
-          </div>
-          <div className="bg-muted border aspect-square p-6 flex justify-between flex-col">
-            <User className="w-8 h-8 stroke-1" />
-            <div className="flex flex-col">
-              <h3 className="text-xl tracking-tight">Pay supplier invoices</h3>
-              <p className="text-muted-foreground max-w-xs text-base">
-                Our goal is to streamline SMB trade, making it easier and faster
-                than ever.
+                Leverage AI-driven insights to analyze and optimize sales and support calls in real time.
               </p>
             </div>
           </div>
@@ -44,24 +33,34 @@ export const Feature6 = () => (
           <div className="bg-muted border aspect-square p-6 flex justify-between flex-col">
             <User className="w-8 h-8 stroke-1" />
             <div className="flex flex-col">
-              <h3 className="text-xl tracking-tight">Pay supplier invoices</h3>
+              <h3 className="text-xl tracking-tight">Automated Lead Management</h3>
               <p className="text-muted-foreground max-w-xs text-base">
-                Our goal is to streamline SMB trade, making it easier and faster
-                than ever.
+                Track, score, and manage leads efficiently with our intelligent CRM designed for EdTech businesses.
               </p>
             </div>
           </div>
+
+          <div className="bg-muted border aspect-square p-6 flex justify-between flex-col">
+            <User className="w-8 h-8 stroke-1" />
+            <div className="flex flex-col">
+              <h3 className="text-xl tracking-tight">Performance Coaching</h3>
+              <p className="text-muted-foreground max-w-xs text-base">
+                Identify skill gaps and provide personalized coaching insights for sales and support teams.
+              </p>
+            </div>
+          </div>
+
           <div className="bg-muted border h-full lg:col-span-2 p-6 aspect-square lg:aspect-auto flex justify-between flex-col">
             <User className="w-8 h-8 stroke-1" />
             <div className="flex flex-col">
-              <h3 className="text-xl tracking-tight">Pay supplier invoices</h3>
+              <h3 className="text-xl tracking-tight">Seamless Integrations</h3>
               <p className="text-muted-foreground max-w-xs text-base">
-                Our goal is to streamline SMB trade, making it easier and faster
-                than ever.
+                Connect with your favorite LMS, VoIP, and CRM tools for a unified workflow and data-driven decisions.
               </p>
             </div>
           </div>
         </div>
+
         <hr className="bg-background w-screen -ml-[50vw] left-1/2 relative" />
       </div>
     </div>

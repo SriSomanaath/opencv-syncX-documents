@@ -62,7 +62,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="px-5 sm:px-8 h-auto">{children}
+          <main className="px-5 sm:px-8 h-auto overflow-hidden">{children}
             <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-background to-transparent"></div>
             <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-background to-transparent"></div>
           </main>
