@@ -16,12 +16,11 @@ const Testimonial = () => {
                     </div>
                     <div className="flex-1 md:ml-12 text-center md:text-left">
                         <p className="text-2xl md:text-3xl font-serif font-medium text-black leading-snug">
-                            “Attio is the first CRM that feels truly modern. It&apos;s powerful,
-                            flexible, and fast to build with. There’s nothing like it on the
-                            market.”
+                            OpenCV SyncX is the CRM that feels truly modern. It&apos;s powerful,
+                            flexible, and fast to build with.”
                         </p>
                         <p className="mt-2 text-gray-400 text-lg">
-                            Sahil Mansuri - CEO & Co-founder at Bravado
+                            Vikas Gupta - Managing Director of OpenCV University
                         </p>
                     </div>
                 </div>

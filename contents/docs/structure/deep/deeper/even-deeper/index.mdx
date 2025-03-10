@@ -1,46 +1,96 @@
 ---
 title: Introduction
-description: This section provides an overview of Introduction.
+description: Overview of OpenCV SyncX, its AI-powered dashboard, and API integrations.
+keywords: ["OpenCV SyncX", "AI", "computer vision", "dashboard", "API"]
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iste dolorum tempore consectetur explicabo tempora provident quia maxime, molestiae, facilis aperiam et, error illum vel ullam? Quis architecto dolore ullam
+![OpenCV SyncX Dashboard](/images/opencv-syncx-dashboard.png "OpenCV SyncX Dashboard")
 
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
+## OpenCV SyncX Overview
 
-| Syntax        | Description |   Test Text |
-| :------------ | :---------: | ----------: |
-| Header        |    Title    | Here's this |
-| Paragraph     |    Text     |    And more |
-| Strikethrough |             |    ~~Text~~ |
+**OpenCV SyncX** is an advanced AI-powered **computer vision platform** that enables **real-time image and video processing**. Through a **dashboard** and **REST API**, SyncX helps businesses, researchers, and developers integrate **AI vision** into their workflows.
+
+### **Why OpenCV SyncX?**
+- **AI-powered object detection & segmentation** 🧠
+- **Image enhancement using deep learning** 📷
+- **Automated workflows for large-scale AI processing** ⚡
+- **Real-time analytics & reporting dashboard** 📊
+- **Seamless cloud & edge AI model deployment** ☁️
+
+---
+
+## Key Features
+
+- [x] **Real-time Object Detection** – Identify objects in images/videos instantly.
+- [x] **Deep Learning-based Image Enhancement** – AI-driven super-resolution & noise reduction.
+- [x] **Automated Processing Pipelines** – Batch process large datasets efficiently.
+- [x] **Interactive Dashboard Analytics** – Monitor model performance & AI insights.
+- [ ] **Upcoming: Pose Estimation & Gesture Recognition**
+
+| Feature            | Description                                      | Status  |
+| ----------------- | ---------------------------------------------- | ------: |
+| Dashboard Insights | View AI processing in real-time                | ✅ |
+| Object Detection  | Detect objects & track movements               | ✅ |
+| Image Enhancement | AI-based denoising, super-resolution, & color correction | ✅ |
+| API Integration   | REST API for automating AI workflows            | ✅ |
+
+---
+
+## Getting Started with SyncX
+
+To begin using **OpenCV SyncX**, follow these steps:
+
+1. **Log in** to the **SyncX Dashboard**.
+2. **Upload an image or video** for processing.
+3. **Select an AI model** (e.g., Object Detection, Image Enhancement).
+4. **Analyze results** in real-time with bounding boxes & AI metrics.
+5. **Download processed files or integrate via API**.
+
+> **Tip:** The SyncX dashboard supports **batch processing**, **drag-and-drop uploads**, and a **real-time model selection tool**.
+
+---
+
+## AI-Powered Dashboard Overview
 
 <CardGrid>
   <Card
-    title="Page Structure"
-    href="/docs/structure/deep/deeper"
-    icon="alignJustify"
+    title="AI Object Detection"
+    href="/docs/ai/object-detection"
+    icon="target"
     variant="small"
-    description="test description"
+    description="Detect and classify objects in images & videos using AI."
   />
   <Card
-    title="Page Structure"
-    href="/docs/structure/deep/deeper"
-    icon="alignJustify"
+    title="Image Enhancement"
+    href="/docs/ai/image-enhancement"
+    icon="image"
     variant="small"
+    description="Use deep learning to enhance image quality, remove noise, and upscale images."
   />
   <Card
-    title="Rubix Studios"
-    href="https://www.rubixstudios.com.au"
-    icon="alignJustify"
+    title="Automated AI Workflows"
+    href="/docs/workflows/automation"
+    icon="repeat"
     external={true}
     variant="small"
+    description="Automate image processing pipelines with AI-driven workflows."
   />
   <Card
-    title="Rubix Studios"
-    href="https://www.rubixstudios.com.au"
-    image="/images/og-image.png"
+    title="API Integration"
+    href="/docs/api/integration"
+    image="/images/api-dashboard.png"
     external={true}
     variant="image"
+    description="Seamlessly integrate AI into your applications using the SyncX API."
   />
 </CardGrid>
+
+---
+
+## API Integration with SyncX
+
+Developers can integrate OpenCV SyncX using the **REST API**.  
+Here’s a **sample API request** for **AI-powered object detection**:
+
+```bash
+POST /api/process

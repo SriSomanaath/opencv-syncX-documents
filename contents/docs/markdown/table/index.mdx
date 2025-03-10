@@ -1,18 +1,45 @@
 ---
 title: Table
-description: This section provides an overview of Introduction.
+description: Overview of OpenCV SyncX features, AI models, and API endpoints.
+keywords: ["OpenCV SyncX", "AI models", "API", "computer vision"]
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iste dolorum tempore consectetur explicabo tempora provident quia maxime, molestiae, facilis aperiam et, error illum vel ullam? Quis architecto dolore ullam
+![OpenCV SyncX Dashboard](/images/opencv-syncx-dashboard.png "OpenCV SyncX Dashboard")
 
-| Syntax        | Description |   Test Text |
-| :------------ | :---------: | ----------: |
-| Header        |    Title    | Here's this |
-| Paragraph     |    Text     |    And more |
-| Strikethrough |             |    ~~Text~~ |
+## OpenCV SyncX Feature Overview
 
-| Feature       | Documentation Link |                    Notes |
-| :------------ | :----------------: | -----------------------: |
-| **Feature A** |     [Docs](#)      | For more info click here |
-| **Feature B** |     [Guide](#)     |  See the full guide here |
-| **Feature C** |     [Setup](#)     |       Setup instructions |
+OpenCV SyncX provides **AI-powered computer vision capabilities**, supporting object detection, image enhancement, and real-time analytics. Below is a structured overview of **features, AI models, and API endpoints**.
+
+---
+
+## AI Model Capabilities
+
+| **Feature**      | **Description**                         | **Status** |
+| --------------- | ------------------------------------- | --------: |
+| Object Detection | Identify & classify objects in images/videos | ✅ |
+| Image Segmentation | AI-powered region segmentation | ✅ |
+| Super-Resolution | Enhance low-resolution images | ✅ |
+| Face Recognition | Detect & verify faces in images | 🔄 (Beta) |
+| Pose Estimation | Identify human body keypoints | 🔄 (Upcoming) |
+
+---
+
+## API Endpoints & Functionality
+
+| **Endpoint**     | **Method** | **Description** |
+| --------------- | --------- | --------------------------- |
+| `/api/process`  | `POST`    | Process image with selected AI model |
+| `/api/models`   | `GET`     | Fetch available AI models |
+| `/api/analytics` | `GET`    | Retrieve processing stats & metrics |
+| `/api/upload`   | `POST`    | Upload images/videos for processing |
+
+---
+
+## API Request & Response Example
+
+### **Request**
+```json
+{
+  "image_url": "https://example.com/sample.jpg",
+  "operation": "object-detection"
+}

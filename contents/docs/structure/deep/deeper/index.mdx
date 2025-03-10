@@ -1,95 +1,79 @@
 ---
 title: Introduction
-description: This section provides an overview of Introduction.
+description: Overview of OpenCV SyncX's dashboard, AI-powered features, and real-time analytics.
+keywords: ["OpenCV", "SyncX", "dashboard", "AI", "computer vision"]
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iste dolorum tempore consectetur explicabo tempora provident quia maxime, molestiae, facilis aperiam et, error illum vel ullam? Quis architecto dolore ullam
+![OpenCV SyncX Dashboard](/images/opencv-syncx-dashboard.png "OpenCV SyncX Dashboard")
 
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
+## OpenCV SyncX Overview
 
-| Syntax        | Description |   Test Text |
-| :------------ | :---------: | ----------: |
-| Header        |    Title    | Here's this |
-| Paragraph     |    Text     |    And more |
-| Strikethrough |             |    ~~Text~~ |
+OpenCV SyncX is an AI-powered **computer vision automation platform** that provides seamless image and video processing through an **interactive dashboard** and API-driven workflows.
 
-## Getting Started
+The **SyncX Dashboard** offers:
+- **AI-powered real-time object detection & analytics**
+- **Automated workflows for image enhancement & segmentation**
+- **Data-driven insights through an interactive dashboard**
+- **Integration with cloud & edge computing environments**
 
-To begin using the Documentation Template, follow these simple steps:
+SyncX empowers businesses, researchers, and developers to build **scalable** and **automated** AI vision applications effortlessly.
 
-- Start by cloning the repository to your local machine.
+## Key Features
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae iure nulla deserunt dolore quam pariatur minus sapiente accusantium. Optio, necessitatibus sequi. Veritatis, aspernatur? Possimus quis repellat eum vitae eveniet.
+- [x] **Dashboard Analytics** – Monitor AI inference results and processing metrics.
+- [x] **Real-time Object Detection** – Detect objects in images and videos instantly.
+- [x] **AI-Powered Image Enhancement** – Improve image quality using deep learning.
+- [x] **Batch Processing** – Automate and process thousands of images at once.
+- [ ] **Upcoming: Pose Estimation & Action Recognition**
 
-## Blockquotes
+| Feature              | Description                                      | Status  |
+| -------------------- | ---------------------------------------------- | ------: |
+| Dashboard Insights  | View real-time AI processing & analytics         | ✅ |
+| Object Detection    | Identify & classify objects in images/videos     | ✅ |
+| Image Enhancement  | AI-based super-resolution, denoising, & color correction | ✅ |
+| Edge Deployment     | Run AI models on edge devices                    | ✅ |
+| Custom Model Training | Train AI models on custom datasets               | 🔄 |
 
-Blockquotes are useful for emphasizing key points or quoting external sources:
+---
 
-> "Documentation is a love letter that you write to your future self." - Damian Conway
+## Getting Started with the SyncX Dashboard
 
-Feel free to use blockquotes to highlight important information or quotes relevant to your documentation.
+To begin using OpenCV SyncX, follow these simple steps:
 
-## Code Examples with switch
+1. **Sign in** to the OpenCV SyncX Dashboard.
+2. **Upload images/videos** for AI processing.
+3. **Select an AI model** (Object Detection, Image Enhancement, etc.).
+4. **Process & analyze results** with real-time analytics.
+5. **Download or integrate via API** to automate your workflows.
 
-Here a custom tab component from shadcn ui is used.
+> **Tip:** The SyncX dashboard provides **drag-and-drop support**, batch uploads, and an interactive **model selector** for easy customization.
 
-<Tabs defaultValue="js">
-  <TabsList>
-    <TabsTrigger value="js">layout.jsx</TabsTrigger>
-    <TabsTrigger value="ts">layout.tsx</TabsTrigger>
-  </TabsList>
-  <TabsContent value="js">
-  ```jsx {7} showLineNumbers
-import ThemeProvider from './theme-provider'
- 
-export default function RootLayout({ children }) {
-  return (
-    <html>
-      <body className="container">
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
-    </html>
-  )}
-````
-  </TabsContent>
-  <TabsContent value="ts">
-```tsx {11} showLineNumbers
-import ThemeProvider from './theme-provider'
- 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html>
-      <body className="container">
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
-    </html>
-  )
-}
-```
-  </TabsContent>
-</Tabs>
+---
 
-## Conclusion
+## Dashboard Components
 
-Thank you for choosing the Documentation Template for your project. Whether you're documenting software, APIs, or processes, we're here to support you in creating clear and effective documentation. Happy documenting!
+### **1️⃣ Upload & Processing Panel**
+- **Upload Images/Videos:** Supports **JPEG, PNG, BMP, MP4**.
+- **Select AI Model:** Choose object detection, segmentation, or enhancement.
+- **Live Preview:** View real-time results before applying them.
 
-## Tabs Example
+### **2️⃣ AI Processing Workflow**
+<Mermaid
+  chart={`graph TD;
+  Upload[Upload Image/Video] --> |Processed| AIModel[AI Model Selection];
+  AIModel --> |Analyzed| Results[Dashboard Insights & API Response]`}
+/>
 
-<Tabs defaultValue="tab1">
-  <TabsList>
-    <TabsTrigger value="tab1">Tab 1</TabsTrigger>
-    <TabsTrigger value="tab2">Tab 2</TabsTrigger>
-  </TabsList>
-  <TabsContent value="tab1">
-    <p>This is content for Tab 1.</p>
-  </TabsContent>
-  <TabsContent value="tab2">
-    <p>This is content for Tab 2.</p>
-  </TabsContent>
-</Tabs>
+### **3️⃣ Live Analytics & Reports**
+- **Performance Metrics:** Track processing time & model accuracy.
+- **Object Detection Results:** View detected objects with bounding boxes.
+- **Data Visualization:** Get structured reports on processed images.
+
+---
+
+## API Integration with SyncX
+
+Developers can integrate SyncX into existing systems using the API. Here's a **sample API request** for AI-powered object detection:
+
+```bash
+POST /api/process

@@ -1,95 +1,78 @@
 ---
 title: Introduction
-description: This section provides an overview of Introduction.
+description: Overview of OpenCV SyncX, its AI-powered dashboard, and API integrations.
+keywords: ["OpenCV SyncX", "AI", "computer vision", "dashboard", "API"]
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iste dolorum tempore consectetur explicabo tempora provident quia maxime, molestiae, facilis aperiam et, error illum vel ullam? Quis architecto dolore ullam
+![OpenCV SyncX Dashboard](/images/opencv-syncx-dashboard.png "OpenCV SyncX Dashboard")
 
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
+## OpenCV SyncX Overview
 
-| Syntax        | Description |   Test Text |
-| :------------ | :---------: | ----------: |
-| Header        |    Title    | Here's this |
-| Paragraph     |    Text     |    And more |
-| Strikethrough |             |    ~~Text~~ |
+**OpenCV SyncX** is an AI-powered **computer vision platform** that provides **real-time image and video processing** through an interactive **dashboard** and **REST API**.
 
-## Getting Started
+With **SyncX**, you can:
+- **Detect objects & segment images** with AI.
+- **Enhance image quality** using deep learning.
+- **Automate computer vision tasks** with an API-driven workflow.
+- **Monitor AI performance & analytics** through a dashboard.
 
-To begin using the Documentation Template, follow these simple steps:
+SyncX is designed for **developers, businesses, and researchers** to streamline AI-powered **image analysis and automation**.
 
-- Start by cloning the repository to your local machine.
+---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae iure nulla deserunt dolore quam pariatur minus sapiente accusantium. Optio, necessitatibus sequi. Veritatis, aspernatur? Possimus quis repellat eum vitae eveniet.
+## Key Features
+
+- [x] **Real-time AI Object Detection** – Identify objects in images & videos.
+- [x] **Deep Learning-based Image Enhancement** – Improve image quality with AI.
+- [x] **Automated AI Processing** – Process large batches of images at scale.
+- [x] **Interactive Dashboard Analytics** – Monitor model accuracy & insights.
+- [ ] **Upcoming: Pose Estimation & Action Recognition**
+
+| Feature            | Description                                      | Status  |
+| ----------------- | ---------------------------------------------- | ------: |
+| Dashboard Insights | Track AI performance & model outputs          | ✅ |
+| Object Detection  | AI-based identification of objects in images/videos | ✅ |
+| Image Enhancement | AI-powered noise reduction & super-resolution  | ✅ |
+| API Integration   | Seamless AI processing with REST API           | ✅ |
+
+---
+
+## Getting Started with SyncX
+
+To begin using **OpenCV SyncX**, follow these steps:
+
+1. **Log in** to the **SyncX Dashboard**.
+2. **Upload an image/video** for processing.
+3. **Select an AI model** (Object Detection, Image Enhancement, etc.).
+4. **View results** in real-time with bounding boxes & analytics.
+5. **Download the output or automate with API integration**.
+
+> **Tip:** The SyncX dashboard supports **batch uploads**, **drag-and-drop**, and an interactive **model selector**.
+
+---
 
 ## Blockquotes
 
-Blockquotes are useful for emphasizing key points or quoting external sources:
+SyncX provides **fast, scalable, and AI-powered** vision automation.
 
-> "Documentation is a love letter that you write to your future self." - Damian Conway
+> "AI-powered computer vision will revolutionize industries by enabling automated decision-making at scale." - OpenCV Team
 
-Feel free to use blockquotes to highlight important information or quotes relevant to your documentation.
+---
 
-## Code Examples with switch
+## Code Examples for API Integration
 
-Here a custom tab component from shadcn ui is used.
+Use the **SyncX API** to automate AI-powered image processing.
 
-<Tabs defaultValue="js">
+<Tabs defaultValue="python">
   <TabsList>
-    <TabsTrigger value="js">layout.jsx</TabsTrigger>
-    <TabsTrigger value="ts">layout.tsx</TabsTrigger>
+    <TabsTrigger value="python">Python</TabsTrigger>
+    <TabsTrigger value="bash">cURL</TabsTrigger>
   </TabsList>
-  <TabsContent value="js">
-  ```jsx {7} showLineNumbers
-import ThemeProvider from './theme-provider'
- 
-export default function RootLayout({ children }) {
-  return (
-    <html>
-      <body className="container">
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
-    </html>
-  )}
-````
-  </TabsContent>
-  <TabsContent value="ts">
-```tsx {11} showLineNumbers
-import ThemeProvider from './theme-provider'
- 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html>
-      <body className="container">
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
-    </html>
-  )
-}
-```
-  </TabsContent>
-</Tabs>
+  <TabsContent value="python">
+  ```python
+import requests
 
-## Conclusion
-
-Thank you for choosing the Documentation Template for your project. Whether you're documenting software, APIs, or processes, we're here to support you in creating clear and effective documentation. Happy documenting!
-
-## Tabs Example
-
-<Tabs defaultValue="tab1">
-  <TabsList>
-    <TabsTrigger value="tab1">Tab 1</TabsTrigger>
-    <TabsTrigger value="tab2">Tab 2</TabsTrigger>
-  </TabsList>
-  <TabsContent value="tab1">
-    <p>This is content for Tab 1.</p>
-  </TabsContent>
-  <TabsContent value="tab2">
-    <p>This is content for Tab 2.</p>
-  </TabsContent>
-</Tabs>
+url = "http://localhost:5000/api/process"
+payload = {"image_url": "https://example.com/sample.jpg", "operation": "object-detection"}
+response = requests.post(url, json=payload)
+print(response.json())

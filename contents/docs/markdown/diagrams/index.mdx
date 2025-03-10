@@ -1,28 +1,37 @@
 ---
 title: Diagrams
-description: Add various diagram types, including flowcharts, decision trees and entity-relationship diagrams.
+description: Comprehensive visualization of AI workflows, API request flows, system architecture, and model training in OpenCV SyncX.
 ---
 
-Diagrams are powerful tools for visualizing processes, relationships, and decisions. This section showcases different types of diagrams created using **Mermaid**, complete with examples and reusable code snippets to integrate into your projects.
+## Overview
 
-## Flowchart
+Diagrams are essential for **understanding, planning, and optimizing AI-powered image processing workflows** in **OpenCV SyncX**. This documentation includes **detailed flowcharts, API workflow diagrams, dataset pipelines, AI model selection trees, and real-world AI deployments**.
 
-A flowchart represents a sequence of steps or processes in a visual format. Use this diagram to map workflows, decision-making processes, or operational flows.
+All diagrams are built using **Mermaid.js**, making them interactive and reusable.
+
+---
+
+## **1️⃣ AI Image Processing Workflow**
+
+The **AI processing pipeline** in OpenCV SyncX follows a structured workflow from **data input** to **model inference** and **final output**.
 
 <Mermaid
   chart={`graph TD;
-    Start --> Task1;
-    Task1 --> Task2;
-    Task2 --> End;`}
+    Upload[Upload Image/Video] --> |Preprocessing| Preprocessing[AI Preprocessing Engine];
+    Preprocessing --> |Feature Extraction| ModelExecution[AI Model Execution];
+    ModelExecution --> |Detection/Enhancement| PostProcessing[Post-processing];
+    PostProcessing --> |Final Output| Output[Processed Image/Video];
+  `}
 />
 
 ```jsx
 <Mermaid
   chart={\`
     graph TD;
-    Start --> Task1;
-    Task1 --> Task2;
-    Task2 --> End;
+    Upload[Upload Image/Video] --> |Preprocessing| Preprocessing[AI Preprocessing Engine];
+    Preprocessing --> |Feature Extraction| ModelExecution[AI Model Execution];
+    ModelExecution --> |Detection/Enhancement| PostProcessing[Post-processing];
+    PostProcessing --> |Final Output| Output[Processed Image/Video];
   \`}
 />
 ```
@@ -32,25 +41,33 @@ A flowchart represents a sequence of steps or processes in a visual format. Use 
 Decision trees illustrate choices and possible outcomes, making them ideal for decision-making workflows or processes involving multiple paths.
 
 <Mermaid
-  chart={`graph TD;
-    A[Start] --> B{Is it raining?};
-    B -->|Yes| C[Take an umbrella];
-    B -->|No| D[Enjoy the weather];
-    C --> E[Go outside];
-    D --> E;`}
+  chart={\`
+    graph TD;
+    Client[Client (User or Application)] --> |Sends Request| API[OpenCV SyncX API];
+    API --> |Validates & Prepares Data| PreProcessing[Preprocessing Engine];
+    PreProcessing --> |Runs AI Model| AIModel[Deep Learning Model];
+    AIModel --> |Post-processing & Output| Response[Processed Image + JSON Data];
+  \`}
 />
 
 ```jsx
 <Mermaid
   chart={\`
     graph TD;
-    A[Start] --> B{Is it raining?};
-    B -->|Yes| C[Take an umbrella];
-    B -->|No| D[Enjoy the weather];
-    C --> E[Go outside];
-    D --> E;
+    Start[Select AI Task] --> Choice{What do you need?};
+    Choice -->|Object Detection| OD[Use YOLO, Faster R-CNN];
+    Choice -->|Image Enhancement| IE[Use Super-Resolution, Denoising Models];
+    Choice -->|Face Recognition| FR[Use FaceNet, DeepFace];
+    Choice -->|Pose Estimation| PE[Use OpenPose, MediaPipe];
+    Choice -->|Action Recognition| AR[Use LSTM, Transformer Models];
+    OD --> End[Deploy Model];
+    IE --> End;
+    FR --> End;
+    PE --> End;
+    AR --> End;
   \`}
 />
+
 ```
 
 ## Entity-Relationship Diagram

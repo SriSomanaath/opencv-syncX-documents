@@ -1,94 +1,106 @@
 ---
 title: Introduction
-description: This section provides an overview of Introduction.
+description: This section provides an overview of OpenCV SyncX, an AI-powered computer vision platform.
+keywords: ["introduction", "OpenCV", "AI", "computer vision"]
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iste dolorum tempore consectetur explicabo tempora provident quia maxime, molestiae, facilis aperiam et, error illum vel ullam? Quis architecto dolore ullam
+![OpenCV SyncX Banner](/images/opencv-syncx-banner.png "OpenCV SyncX")
 
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
+## OpenCV SyncX
 
-| Syntax        | Description |   Test Text |
-| :------------ | :---------: | ----------: |
-| Header        |    Title    | Here's this |
-| Paragraph     |    Text     |    And more |
-| Strikethrough |             |    ~~Text~~ |
+Welcome to **OpenCV SyncX**, a state-of-the-art AI-powered computer vision platform designed for seamless image and video processing.
 
-## Sample Document with Mermaid
+OpenCV SyncX integrates deep learning, automated workflows, and a robust API to streamline the development of computer vision applications.
 
-Here is a Mermaid diagram:
+- **Real-time AI Processing**: Enhance, detect, and segment images instantly.
+- **Cloud & Edge Compatibility**: Deploy on cloud services or edge devices efficiently.
+- **Pre-trained AI Models**: Leverage deep learning models for high-accuracy tasks.
+
+## Features Overview
+
+- [x] AI-driven object detection and segmentation
+- [x] Image enhancement using deep learning
+- [x] Automated workflows for real-time processing
+- [ ] Additional model integrations (Upcoming)
+
+| Feature         | Description                                       | Status  |
+| :------------- | :----------------------------------------------: | ------: |
+| Object Detection | Identify and classify objects in images         | ✅ |
+| Image Segmentation | Segment objects with AI-powered vision      | ✅ |
+| Edge Deployment | Run models on low-power devices                 | ✅ |
+| Custom Training | Train and fine-tune models on custom datasets   | 🔄 |
+
+## AI Processing Pipeline (Mermaid Diagram)
 
 <Mermaid
   chart={`graph TD;
-  A-->B;
-  A-->C;
-  B-->D;
-  C-->D;`}
+  Input[Upload Image] --> |Processed| AIModel[Deep Learning Model];
+  AIModel --> |Outputs| Results[Classified & Enhanced Image]`}
 />
-
-This diagram should render automatically without any extra imports.
 
 ## Getting Started
 
-To begin using the Documentation Template, follow these simple steps:
+To begin using OpenCV SyncX, follow these simple steps:
 
-- Start by cloning the repository to your local machine.
+1. Clone the repository to your local machine:
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae iure nulla deserunt dolore quam pariatur minus sapiente accusantium. Optio, necessitatibus sequi. Veritatis, aspernatur? Possimus quis repellat eum vitae eveniet.
+```bash
+git clone https://github.com/opencv/syncx.git
+cd syncx
+```
+
+2. Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Start the server:
+
+```bash
+python syncx_server.py
+```
+
+4. Open the application in your browser:
+
+```bash
+http://localhost:5000
+```
 
 ## Blockquotes
 
-Blockquotes are useful for emphasizing key points or quoting external sources:
+Blockquotes help emphasize key points or external references:
 
-> "Documentation is a love letter that you write to your future self." - Damian Conway
+> "Computer vision is the future of AI applications." - OpenCV Team
 
-Feel free to use blockquotes to highlight important information or quotes relevant to your documentation.
+## Code Examples
 
-## Code Examples with switch
+Here’s how you can use the OpenCV SyncX API to process an image:
 
-Here a custom tab component from shadcn ui is used.
-
-<Tabs defaultValue="js" className="pt-5 pb-1">
+<Tabs defaultValue="python" className="pt-5 pb-1">
   <TabsList className="">
-    <TabsTrigger value="js">layout.jsx</TabsTrigger>
-    <TabsTrigger value="ts">layout.tsx</TabsTrigger>
+    <TabsTrigger value="python">Python</TabsTrigger>
+    <TabsTrigger value="bash">cURL</TabsTrigger>
   </TabsList>
-  <TabsContent value="js">
-  ```jsx {7} showLineNumbers
-import ThemeProvider from './theme-provider'
- 
-export default function RootLayout({ children }) {
-  return (
-    <html>
-      <body className="container">
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
-    </html>
-  )}
-````
+  <TabsContent value="python">
+  ```python
+import requests
+
+url = "http://localhost:5000/api/process"
+payload = {"image_url": "https://example.com/sample.jpg", "operation": "object-detection"}
+response = requests.post(url, json=payload)
+print(response.json())
+```
   </TabsContent>
-  <TabsContent value="ts">
-```tsx {11} showLineNumbers
-import ThemeProvider from './theme-provider'
- 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html>
-      <body className="container">
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
-    </html>
-  )
-}
+  <TabsContent value="bash">
+```bash
+curl -X POST "http://localhost:5000/api/process" \
+     -H "Content-Type: application/json" \
+     -d '{"image_url": "https://example.com/sample.jpg", "operation": "object-detection"}'
 ```
   </TabsContent>
 </Tabs>
 
 ## Conclusion
 
-Thank you for choosing the Documentation Template for your project. Whether you're documenting software, APIs, or processes, we're here to support you in creating clear and effective documentation. Happy documenting!
+Thank you for choosing OpenCV SyncX for your AI-powered vision projects. Whether you're working on image recognition, video analysis, or custom AI models, we are here to support your development journey. Happy coding! 🚀

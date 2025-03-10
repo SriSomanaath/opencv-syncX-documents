@@ -1,80 +1,81 @@
 ---
 title: Introduction
-description: This section provides an overview of Introduction.
+description: An overview of OpenCV SyncX, its dashboard, AI-powered vision models, and integrations.
+keywords: ["OpenCV SyncX", "computer vision", "AI", "dashboard", "image processing"]
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iste dolorum tempore consectetur explicabo tempora provident quia maxime, molestiae, facilis aperiam et, error illum vel ullam? Quis architecto dolore ullam
+![OpenCV SyncX Dashboard](/images/opencv-syncx-dashboard.png "OpenCV SyncX Dashboard")
 
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
+## OpenCV SyncX Overview
 
-| Syntax        | Description |   Test Text |
-| :------------ | :---------: | ----------: |
-| Header        |    Title    | Here's this |
-| Paragraph     |    Text     |    And more |
-| Strikethrough |             |    ~~Text~~ |
+**OpenCV SyncX** is an **AI-powered** computer vision platform designed for **real-time image and video analysis**. With an interactive **dashboard**, powerful **deep learning models**, and **seamless API integration**, SyncX helps businesses, researchers, and developers **automate AI-driven workflows** effortlessly.
 
-## Getting Started
+### **Why OpenCV SyncX?**
+- **AI-powered object detection & segmentation** 🧠
+- **Image enhancement with deep learning** 📷
+- **Automated workflows for large-scale processing** ⚡
+- **Real-time analytics & reporting dashboard** 📊
+- **Seamless integration with cloud & edge devices** ☁️
 
-To begin using the Documentation Template, follow these simple steps:
+---
 
-- Start by cloning the repository to your local machine.
+## Key Features
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quae iure nulla deserunt dolore quam pariatur minus sapiente accusantium. Optio, necessitatibus sequi. Veritatis, aspernatur? Possimus quis repellat eum vitae eveniet.
+- [x] **Real-time Object Detection** – Identify objects in images & videos instantly.
+- [x] **AI-driven Image Enhancement** – Super-resolution, denoising & color correction.
+- [x] **Automated Image Segmentation** – Classify and segment image regions.
+- [x] **Dashboard Analytics** – Monitor AI processing & track model performance.
+- [ ] **Upcoming: Pose Estimation & Action Recognition**
 
-## Blockquotes
+| Feature            | Description                                      | Status  |
+| ----------------- | ---------------------------------------------- | ------: |
+| Dashboard Insights | View real-time AI processing & analytics        | ✅ |
+| Object Detection  | Identify & classify objects in images/videos     | ✅ |
+| Image Enhancement | AI-based super-resolution, denoising, & color correction | ✅ |
+| Batch Processing  | Automate processing of multiple images           | ✅ |
+| Edge Deployment  | Run AI models on IoT/embedded devices             | ✅ |
 
-Blockquotes are useful for emphasizing key points or quoting external sources:
+---
 
-> "Documentation is a love letter that you write to your future self." - Damian Conway
+## Getting Started with OpenCV SyncX
 
-Feel free to use blockquotes to highlight important information or quotes relevant to your documentation.
+To get started with OpenCV SyncX:
 
-## Code Examples with switch
+1. **Sign in** to the **SyncX Dashboard**.
+2. **Upload images/videos** or provide an API URL for processing.
+3. **Choose AI models** for **detection, enhancement, or segmentation**.
+4. **View real-time analytics & download results**.
+5. **Automate workflows** via the SyncX **REST API**.
 
-Here a custom tab component from shadcn ui is used.
+> **Tip:** The SyncX dashboard supports **drag-and-drop uploads**, **batch processing**, and a powerful **model selector** for customization.
 
-<Tabs defaultValue="js" className="pt-5 pb-1">
-  <TabsList className="">
-    <TabsTrigger value="js">layout.jsx</TabsTrigger>
-    <TabsTrigger value="ts">layout.tsx</TabsTrigger>
-  </TabsList>
-  <TabsContent value="js">
-  ```jsx {7} showLineNumbers
-import ThemeProvider from './theme-provider'
- 
-export default function RootLayout({ children }) {
-  return (
-    <html>
-      <body className="container">
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
-    </html>
-  )}
-````
-  </TabsContent>
-  <TabsContent value="ts">
-```tsx {11} showLineNumbers
-import ThemeProvider from './theme-provider'
- 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html>
-      <body className="container">
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
-    </html>
-  )
-}
-```
-  </TabsContent>
-</Tabs>
+---
 
-## Conclusion
+## Dashboard Components
 
-Adding some random stuff to change the code
+### **1️⃣ Upload & Processing Panel**
+- **Upload Image/Video** – Supports **JPEG, PNG, BMP, MP4**.
+- **Select AI Model** – Choose object detection, segmentation, or enhancement.
+- **Real-time Preview** – Visualize AI results before applying them.
+
+### **2️⃣ AI Processing Workflow**
+<Mermaid
+  chart={`graph TD;
+  Upload[Upload Image/Video] --> |Processed| AIModel[AI Model Selection];
+  AIModel --> |Analyzed| Results[Dashboard Insights & API Response]`}
+/>
+
+### **3️⃣ Live Analytics & Reports**
+- **Performance Metrics:** Track AI processing time & model accuracy.
+- **Detection Results:** View identified objects with bounding boxes.
+- **Data Visualization:** Structured reports for processed images.
+
+---
+
+## API Integration
+
+Developers can integrate OpenCV SyncX using the **REST API**.  
+Here’s a **sample API request** for **object detection**:
+
+```bash
+POST /api/process

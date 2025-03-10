@@ -16,7 +16,7 @@ export const keywords = [
 
 export const urlimage = "/images/og-image.png"
 export const imagealt = "OpenCV SyncX Documentation"
-export const twitterhandle = "@RubixStudios"
+export const twitterhandle = "@OpenCVSyncX"
 
 export const companyname = "OpenCV SyncX"
 export const companylink = ""
