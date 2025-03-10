@@ -13,7 +13,7 @@ export default function Page() {
 
     return (
         <div className="flex flex-col items-center">
-            <div ref={ref} className="relative h-[50vh] flex items-center justify-center">
+            <div ref={ref} className="relative h-[50vh] flex items-center justify-center px-4 sm:px-6">
                 {/* Dot Pattern positioned behind */}
                 <DotPattern
                     className={cn(
@@ -26,7 +26,7 @@ export default function Page() {
                     initial={{ opacity: 0, y: 50 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 1 }}
-                    className="relative text-3xl md:text-4xl lg:text-[2.6rem] font-medium text-center leading-relaxed max-w-2xl"
+                    className="relative text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[2.6rem] font-medium text-center leading-snug md:leading-relaxed max-w-2xl"
                 >
                     “OpenCV SyncX, I could see it was built for the next generation of CRM—smarter, faster, and seamlessly integrated for growth.”
                 </motion.p>

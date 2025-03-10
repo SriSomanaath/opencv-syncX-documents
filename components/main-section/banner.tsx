@@ -1,6 +1,6 @@
 const Banner = () => {
     return (
-        <section className="w-screen bg-[#f5f5f5] dark:bg-[#1a1a1a] border-t border-b text-gray-700 dark:text-gray-200 py-12 -ml-8 md:py-16 mx-auto px-0">
+        <section className="w-full bg-[#f5f5f5] dark:bg-[#1a1a1a] border-t border-b text-gray-700 dark:text-gray-200 py-12 md:py-16 -ml-8 -mr-8">
             <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 border-l border-r">
                 <div className="text-center md:text-left">
                     <h2 className="text-3xl md:text-4xl font-medium text-black dark:text-white">

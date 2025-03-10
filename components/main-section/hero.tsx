@@ -5,10 +5,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
 import { Codepen, Columns4, DatabaseZap, ImageUpscale, Route } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
-import { motion } from "framer-motion"; // Import Framer Motion
+import { motion } from "framer-motion";
 
 const Hero1 = ({
-  badge = "We're reform you!",
+  badge = "We're reforming you!",
   heading = "OpenCV SyncX Supercharge with AI",
   description = "Effortless collaboration, smarter automation, and faster growth—all in one place.",
   tabs = [
@@ -21,7 +21,6 @@ const Hero1 = ({
         title: "Close More Deals, Faster.",
         description:
           "Enhance your sales strategy with AI-driven insights and automation. Improve outreach, track performance, and maximize conversion rates.",
-        buttonText: "Explore Solutions",
         imageSrc: "/data-dashboard.png",
         imageAlt: "sales",
       },
@@ -35,7 +34,6 @@ const Hero1 = ({
         title: "Automate Workflows for Seamless Operations.",
         description:
           "Eliminate manual tasks with AI-powered automation. Nurture leads, trigger actions, and improve efficiency across the sales funnel.",
-        buttonText: "View Automations",
         imageSrc: "/automation-dashboard.png",
         imageAlt: "automation",
       },
@@ -49,7 +47,6 @@ const Hero1 = ({
         title: "Leverage Data for Smarter Decisions.",
         description:
           "Utilize real-time data to track customer behavior, forecast trends, and optimize engagement. Make data-driven decisions with ease.",
-        buttonText: "Unlock Insights",
         imageSrc: "/pipeline-dashboard.png",
         imageAlt: "data intelligence",
       },
@@ -63,7 +60,6 @@ const Hero1 = ({
         title: "Streamline Your Sales Pipeline.",
         description:
           "Monitor, track, and manage leads effortlessly. Keep your team aligned with a structured pipeline that drives predictable revenue.",
-        buttonText: "Optimize Pipeline",
         imageSrc: "/productivity-dashboard.png",
         imageAlt: "pipeline",
       },
@@ -77,7 +73,6 @@ const Hero1 = ({
         title: "Gain Clear, Actionable Insights.",
         description:
           "Generate real-time reports and dashboards to measure success. Identify trends, optimize campaigns, and maximize ROI.",
-        buttonText: "View Reports",
         imageSrc: "/analytics-dashboard.png",
         imageAlt: "reporting",
       },
@@ -94,36 +89,40 @@ const Hero1 = ({
         return tabs[nextIndex].value;
       });
     }, 4000);
-
     return () => clearInterval(interval);
   }, [tabs]);
 
   return (
-    <section className="">
+    <section className="py-20 px-4">
       <div className="container mx-auto">
-        <div className="border-l border-r py-32">
-          <div className="flex flex-col items-center gap-4 text-center">
-            <Badge variant="outline" className="font-medium">
+        <div className="border-l border-r py-16">
+          <div className="flex flex-col items-center text-center gap-2">
+            <Badge variant="outline" className="font-medium text-sm">
               {badge}
             </Badge>
-            <h1 className="max-w-2xl text-5xl font-semibold md:text-6xl">
+            <h1 className="max-w-3xl text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight">
               {heading}
             </h1>
-            <p className="text-muted-foreground">{description}</p>
+            <p className="text-[clamp(1rem,2.5vw,1.5rem)] text-muted-foreground max-w-2xl">
+              {description}
+            </p>
           </div>
+
           <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-8">
-            <TabsList className="container flex flex-col items-center justify-center gap-[6px] sm:flex-row">
+            <TabsList className="flex flex-wrap justify-center gap-2">
               {tabs.map((tab) => (
                 <TabsTrigger
                   key={tab.value}
                   value={tab.value}
-                  className="flex items-center border !p-1 !px-2 gap-2 rounded-lg px-4 py-3 text-sm text-muted-foreground data-[state=active]:bg-muted data-[state=active]:text-primary"
+                  className="flex gap-2 items-center border px-4 py-2 rounded-lg text-sm text-muted-foreground transition-all data-[state=active]:bg-muted data-[state=active]:text-primary"
                 >
                   {tab.icon} {tab.label}
                 </TabsTrigger>
               ))}
             </TabsList>
+
             <hr className="bg-background mt-8 w-screen -ml-[50vw] left-1/2 relative" />
+
             <div className="mx-auto w-screen-xl rounded-lg shadow-xl border border-neutral-200 border bg-muted/70 relative overflow-hidden">
               {tabs.map((tab) => (
                 <TabsContent key={tab.value} value={tab.value} className="w-full">
